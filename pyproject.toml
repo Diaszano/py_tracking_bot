@@ -9,7 +9,21 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 
+[tool.poetry.group.formatter.dependencies]
+blue = "^0.9.1"
+isort = "^5.13.2"
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.12.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = "blue --check --diff . && isort --check --diff ."
+format = "blue . && isort ."
