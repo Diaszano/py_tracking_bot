@@ -32,6 +32,13 @@ class User(Base):
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
 
+    def __str__(self) -> str:
+        return (
+            f'(id: {self.id}, telegram_id: {self.telegram_id}, '
+            + f'trackings: {self.trackings}, '
+            + f'updated_at: {self.updated_at}, created_at: {self.created_at})'
+        )
+
 
 class Order(Base):
     __tablename__ = 'orders'
@@ -51,6 +58,13 @@ class Order(Base):
     created_at = Column(
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
+
+    def __str__(self) -> str:
+        return (
+            f'(id: {self.id}, code: {self.code}, '
+            + f'trackings: {self.trackings}, data: {self.data}, '
+            + f'updated_at: {self.updated_at}, created_at: {self.created_at})'
+        )
 
 
 class Tracking(Base):
@@ -75,3 +89,10 @@ class Tracking(Base):
     created_at = Column(
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
+
+    def __str__(self) -> str:
+        return (
+            f'(id: {self.id}, name: {self.name}, '
+            + f'user: {self.user}, order: {self.order}, '
+            + f'updated_at: {self.updated_at}, created_at: {self.created_at})'
+        )
