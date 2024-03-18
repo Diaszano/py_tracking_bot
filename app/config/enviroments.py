@@ -17,6 +17,7 @@ with __env.prefixed('TELEGRAM_'):
         TELEGRAM_API_HASH: str = __env.str('HASH', validate=Length(min=10))
     with __env.prefixed('BOT_'):
         TELEGRAM_BOT_TOKEN: str = __env.str('TOKEN', validate=Length(min=10))
+        TELEGRAM_BOT_NAME: str = __env.str('NAME', validate=Length(1))
 
 with __env.prefixed('DATABASE_'):
     DATABASE_URL: ParseResult = __env.url(
