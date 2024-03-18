@@ -1,3 +1,8 @@
+"""
+This module is responsible for creating schemas in the database.
+
+It provides all the database schemas that are used in this system.
+"""
 from sqlalchemy import (
     BigInteger,
     Column,
