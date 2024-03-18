@@ -11,6 +11,8 @@ python = "^3.12"
 environs = "^11.0.0"
 pyrogram = "^2.0.106"
 uvloop = "^0.19.0"
+sqlalchemy = "^2.0.28"
+psycopg-binary = "^3.1.18"
 
 [tool.poetry.group.formatter.dependencies]
 blue = "^0.9.1"
