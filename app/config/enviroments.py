@@ -3,6 +3,7 @@ This module is responsible for loading system environment settings.
 
 It provides functionalities to load and manage environment settings, allowing for easy and flexible system configuration.
 """
+from logging import INFO
 from urllib.parse import ParseResult
 
 from environs import Env
@@ -24,6 +25,8 @@ with __env.prefixed('DATABASE_'):
         'URL', schemes=['postgresql+asyncpg'], require_tld=False
     )
 
+with __env.prefixed('LOG_'):
+    LOG_LEVEl: int = __env.log_level('LEVEL', INFO)
 
 __env.seal()
 
