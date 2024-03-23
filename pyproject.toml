@@ -17,6 +17,7 @@ asyncpg = "^0.29.0"
 tgcrypto = "^1.2.5"
 loguru = "^0.7.2"
 pydantic = "^2.6.4"
+redis = {extras = ["hiredis"], version = "^5.0.3"}
 
 [tool.poetry.group.formatter.dependencies]
 blue = "^0.9.1"
