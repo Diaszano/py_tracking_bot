@@ -1,8 +1,9 @@
 """
-This package is reposable by configurations.
+Este pacote é responsável pelas configurações.
 
-It provides all the necessary settings for the system to run successfully.
+Ele fornece todas as configurações necessárias para o sistema funcionar com sucesso.
 """
-from . import enviroments
 
-__all__ = ('enviroments',)
+from . import environments
+
+__all__ = ('environments',)
