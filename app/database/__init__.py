@@ -1,8 +1,9 @@
 """
-This package is responsible for configuring the database.
+Este pacote é responsável por configurar o banco de dados.
 
-It provides all the necessary configurations to use the database in the system.
+Ele fornece todas as configurações necessárias para utilizar o banco de dados no sistema.
 """
+
 from sqlalchemy.ext.asyncio import AsyncSession as Session
 
 from .connection import Engine

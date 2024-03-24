@@ -1,8 +1,9 @@
 """
-This module is responsible for connecting to the database.
+Este módulo é responsável por conectar-se ao banco de dados.
 
-Provides functionalities to create engine for the database.
+Fornece funcionalidades para criar o mecanismo do banco de dados.
 """
+
 try:
     from config.enviroments import DATABASE_URL
 except ImportError:
