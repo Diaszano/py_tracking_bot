@@ -46,11 +46,13 @@ class Base(declarative_base()):
         for key, value in self.__dict__.items():
             length -= 1
             if '_sa_instance_state' not in key:
-                string += f'{key}: {value}'
+                string += f'{key!r}: {value!r}'
                 if length >= 1:
                     string += ', '
         string += ')'
         return string
 
 
-__all__ = ('Base',)
+from .user import User
+
+__all__ = ('Base', 'User')
