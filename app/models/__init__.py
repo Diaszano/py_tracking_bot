@@ -53,6 +53,7 @@ class Base(declarative_base()):
         return string
 
 
+from .tracking import Tracking
 from .user import User
 
-__all__ = ('Base', 'User')
+__all__ = ('Base', 'Tracking', 'User')
