@@ -43,6 +43,7 @@ class User(Base):
     )
     telegram_id = Column(
         BigInteger,
+        nullable=False,
         unique=True,
         index=True,
         comment='ID do Telegram do usuário',
